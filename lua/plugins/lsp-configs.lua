@@ -16,7 +16,7 @@ return {
 {
 	"williamboman/mason-lspconfig.nvim",
 	opts = {
-		ensure_installed = { "lua_ls", "pyright", "bashls"},
+		ensure_installed = { "lua_ls", "pyright", "bashls", "cmake", "terraformls", "clangd" },
 	}
 },
 {
@@ -26,6 +26,9 @@ return {
 		lspconfig.lua_ls.setup({})
 		lspconfig.pyright.setup({})
 		lspconfig.bashls.setup({})
+		lspconfig.terraformls.setup({})
+		lspconfig.cmake.setup({})
+		lspconfig.clangd.setup({})
 
 		vim.keymap.set('n', '<space>ca', vim.lsp.buf.code_action, {})
 	end
